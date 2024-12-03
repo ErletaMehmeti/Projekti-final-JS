@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+  
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 13px;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Poppins' , sans-serif;
+    background: #ef476f;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    background: #fff;
+    margin-top: 50px;
+    max-width: 1200px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px 
+                  rgba(0 , 0, 0, 0.5)) ;
+    gap: 20px;
+    
+}
+.container::before{
+    content: '';  
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('image/group-people-holding-question-mark-icons_53876-64627.avif');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    opacity: 0.1;  
+    z-index: -1;  
+}
+header {
+    justify-content: flex-end; /* E vendos butonin në anen e djatht */
+    align-items: center; /* Qendron n mes vertikalisht */
+    padding: 5px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #ff477f;
+    
+}
+
+body.dark-mode .container {
+    background-color: #444;
+}
+
+body.dark-mode .toggle-dark {
+    background-color: #fff;
+    color: #333;
+}
+
+
+.faq-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    flex: 2;
+    position: relative;
+    width: 350px;
+    margin-left: 55px;
+    background: #FFF;
+    margin: 15px;
+    border-radius: 8px;
+
+}
+
+#faqForm {
+    width: 100%;
+    max-width: 400px; 
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#faqForm label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#faqForm input {
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+#faqForm button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ff477f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#faqForm button:hover {
+    background-color: #e6006f;
+}
+
+.faq-img {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+
+.faq-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px; 
+}
+.form-container {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Forma */
+h1.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Maksimumi i gjersis s formularit */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ef476f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0a7b2;
+}
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#formError {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+/* pozita  */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;  /* Ndërron pozicionin */
+    }
+
+    .faq-img {
+        order: 1; /* Fotoja vjen pas formularit në celular */
+        width: 200px;
+        mix-blend-mode: multiply;
+    }
+
+    .form-container {
+        order: 2; /* Formulari vjen i pari */
+    }
+}
+
+.title{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content-accordion {
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.question-answer{
+    width: 100%;
+    border-bottom: 1px solid #e4e3;
+    color: #f480a3;
+}
+.question-answer {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    padding: 10px 12px;
+    background: #fefefe;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px; 
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.question-answer:nth-child(1) {
+    background: #fff0f3 ; /* Ngjyra per te paren */
+}
+
+.question-answer:nth-child(2) {
+    background:#ffe5ec ; /* Ngjyra per te dyten */
+}
+
+.question-answer:nth-child(3) {
+    background: #efc3ca; /* Ngjyra per te treten */
+}
+
+.question-answer:nth-child(4) {
+    background: #f9bec7; /* Ngjyra per te katerten */
+}
+.question-answer:nth-child(5) {
+    background: #fbb1bd; /* Ngjyra per te pesten */
+}
+.question-answer:nth-child(6) {
+    background: #ff99ac; /* Ngjyra per te gjashten */
+}
+
+
+.question-answer:hover {
+    background: #f5f5f5;
+}
+
+
+
+.question-answer.answered .title-question {
+    color: rgba(172, 13, 172, 0.617); 
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-img{
+    position: relative;
+    width: 370px;
+}
+
+.title-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.question-btn.rotate {
+    transform: rotate(180deg); 
+}
+
+
+.up-icon{
+    display: none;
+}
+
+.answer {
+    display: none; 
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 5px;
+    
+}
+
+.show-text .answer {
+    display: block;
+}
+
+
+.show-text .up-icon{
+    display: inline;
+
+}
+
+.show-text .down-icon{
+    display: none;
+    
+}
+
+@media screen and (min-width: 992px){
+    .accordion{
+        width: 920px;
+        height: 0;
+        display: flex;
+    }
+}
+
+    .accordion-img{
+        position: relative;
+        width: 420px;
+        top: 88px;
+    }
+
+    .question-answer{
+        width: 380px;
+    }
+
+    .title{
+        margin-top: 50px;
+        font-size: 5rem;
+    }
+    
+    
+    .question-answer.active .up-icon {
+        display: inline; 
+        color: #ef476f;
+    }
+    
+    .question-answer.active .down-icon {
+        display: none;
+    }
+    
+    .question-answer .down-icon {
+        display: inline;
+        color: #666;
+    }
